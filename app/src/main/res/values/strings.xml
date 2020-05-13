@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AsyncTask</string>
+    <string name="task_1">Task 1</string>
+    <string name="task_2">Task 2</string>
+    <string name="enter_a_number">Enter a number:</string>
+    <string name="submit">Submit</string>
+    <string name="go_back">Go back</string>
+</resources>

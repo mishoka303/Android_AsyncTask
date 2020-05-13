@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/textNumber1"
         android:layout_width="317dp"
         android:layout_height="43dp"
         android:layout_marginTop="72dp"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintTop_toBottomOf="@+id/textNumber1" />
 
     <Button
         android:id="@+id/back1"
@@ -42,10 +42,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintTop_toBottomOf="@+id/textNumber1" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/resultText1"
         android:layout_width="316dp"
         android:layout_height="58dp"
         android:layout_marginTop="128dp"
@@ -53,5 +53,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintTop_toBottomOf="@+id/textNumber1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

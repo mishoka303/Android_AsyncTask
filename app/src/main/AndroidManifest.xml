@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Task1"/>
-        <activity android:name=".Task2"/>
+        <activity android:name=".NumberCounterActivity"/>
+        <activity android:name=".RandTasksCounterActivity"/>
     </application>
 
 </manifest>

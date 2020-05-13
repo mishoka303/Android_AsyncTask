@@ -14,31 +14,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Task2 extends AppCompatActivity {
+public class RandTasksCounterActivity extends AppCompatActivity {
     ProgressBar pb1, pb2, pb3;
     TextView txtView;
     boolean DownloadSuccess, LoginSuccess;
-    Random rand = new Random();
     int DownloadRandTime, LoginRandTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.view2);
+        setContentView(R.layout.rand_tasks_counter);
 
-        pb1 = findViewById(R.id.pb1); // Progress bar 1
-        pb2 = findViewById(R.id.pb2); // Progress bar 2
-        pb3 = findViewById(R.id.pb3); // Progress bar 3
+        pb1 = findViewById(R.id.downloadProgressBar); // Progress bar 1
+        pb2 = findViewById(R.id.loginProgressBar); // Progress bar 2
+        pb3 = findViewById(R.id.circleProgressBar); // Progress bar 3
         pb3.setVisibility(View.INVISIBLE);
-        txtView = findViewById(R.id.textView2);
+        txtView = findViewById(R.id.resultText2);
     }
 
     // Clicking Submit button
     public void function1(View view) {
         pb3.setVisibility(View.VISIBLE);
-        DownloadRandTime = (int) Math.floor(Math.random() * (5 - 2)) + 2;
-        LoginRandTime = (int) Math.floor(Math.random() * (5 - 3)) + 3;
+        DownloadRandTime = new Random().nextInt(3 + 1) + 2;
+        LoginRandTime = new Random().nextInt(2 + 1) + 3;
         txtView.setText("");
 
         DownloadTask downloadPicture = new DownloadTask();
@@ -48,7 +47,7 @@ public class Task2 extends AppCompatActivity {
     }
 
     // Clicking Back button
-    public void function2(View view) { startActivity(new Intent(Task2.this, MainActivity.class)); }
+    public void function2(View view) { startActivity(new Intent(RandTasksCounterActivity.this, MainActivity.class)); }
 
 
     @SuppressLint("StaticFieldLeak") private class DownloadTask extends AsyncTask<Void,Integer,Boolean>
